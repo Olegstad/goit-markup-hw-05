@@ -134,15 +134,26 @@ h1, h2, h3, h4, p {
 }
 
 .header-link {
+    position: relative;
     display: block; 
     padding-top: 32px;
     padding-bottom: 32px;
-
     color: var(--main-text-color);
-
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em
+}
+
+.header-link.current::after {
+    content: ''; 
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-text-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: 0;
 }
 
 .current {
